@@ -1,8 +1,18 @@
 <!DOCTYPE html>
 <html>
+ // CREATE DATABASE temperaturas;
 
+USE temperaturas;
+
+CREATE TABLE registros (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    hora TIME,
+    fecha DATE,
+    temperatura DECIMAL(5,2)
+); datos para crear la base de datos
+    //
 <head>
-    <title>Registro de información de la tabla hora, tiempo, temperatura</title>
+    <title>Registro de informaciÃ³n de la tabla hora, tiempo, temperatura</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -107,7 +117,7 @@
         $conn = new mysqli($servername, $username, $password, $dbname);
 
         if ($conn->connect_error) {
-            die("Error de conexión: " . $conn->connect_error);
+            die("Error de conexiÃ³n: " . $conn->connect_error);
         }
 
         if (isset($_POST['guardar'])) {
