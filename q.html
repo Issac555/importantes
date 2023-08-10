@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <tr>
+     <title>Lista de Hora, Fecha y Temperatura</title>
+    </tr>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .table-container {
+            text-align: center;
+        }
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: auto;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 4px solid #2986cc;
+            padding: 5px;
+
+        }
+        th {
+            background-color: #f2f2f2;
+            background-color: #2986cc;
+        }
+        button {
+            margin-top: 10px;
+            border-collapse: collapse;
+            padding: 5px;
+            border: 4px solid #2986cc;
+
+        }
+    </style>
+</head>
+<body>
+     <center><h1>Reporte tabulador por Lienas - Horitas</h1></center>
+    <br>
+          <div class="table-container">
+               <table>
+                    <tr>
+                         <th>Hora</th>
+                         <th>Fecha</th>
+                         <th>Temperatura</th>
+                    </tr>
+                    <tr>
+                         <td>12:00:00</td>
+                         <td>2023-07-17</td>
+                         <td>25°C</td>
+                    </tr>
+                    <!-- Otras filas de datos aquí -->
+               </table>
+               <button id="agregarfiliti">Agregar Fila</button>
+          </div>
+     </br>
+
+    <script> //cosita pa agregar fila, hay colocas tu la función de añadir fecha y hora pq yo no se xd, puedo buscar si quieres
+        document.getElementById("agregarfiliti").addEventListener("click", function() {
+            var tablecita = document.querySelector("table");
+            var rocito = tablecita.insertRow(tablecita.rows.length);
+
+            var horita = rocito.insertCell(0);
+            horita.textContent = "horitacaa";
+
+            var fechita = rocito.insertCell(1);
+            fechita.textContent = "fechesita";
+
+            var temperaturita = rocito.insertCell(2);
+            temperaturita.textContent = "hace frio";
+        });
+    </script>
+</body>
+</html>
